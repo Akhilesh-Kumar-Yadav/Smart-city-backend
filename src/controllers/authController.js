@@ -18,7 +18,7 @@ export const registerUser = async (req, res) => {
 
       await user.save();
 
-     // await sendEmail(email, "Verify your account", `Your OTP is: ${otp}`);
+      await sendEmail(email, "Verify your account", `Your OTP is: ${otp}`);
 
       return res.status(200).json({
         message: "OTP resent. Please verify your email.",
