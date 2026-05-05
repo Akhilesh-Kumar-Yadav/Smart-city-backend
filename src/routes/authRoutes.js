@@ -4,6 +4,7 @@ import { registerUser, verifyOTP, loginUser, forgotPassword, resetPassword } fro
 const router = express.Router();
 
 router.post("/register", registerUser);
+router.post("/resendOTP", resendOTP);
 router.post("/verify-otp", verifyOTP);
 router.post("/login", loginUser);
 router.post("/forgot-password", forgotPassword);
