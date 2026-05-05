@@ -1,4 +1,3 @@
-export default sendEmail;
 import nodemailer from "nodemailer";
 
 const sendEmail = async (to, subject, text) => {
@@ -8,7 +7,7 @@ const sendEmail = async (to, subject, text) => {
     secure: false,
     auth: {
       user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS, // MUST be Gmail App Password
+      pass: process.env.EMAIL_PASS, // Gmail App Password
     },
   });
 
